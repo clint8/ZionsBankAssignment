@@ -1,0 +1,28 @@
+A1) One reason we may want to delimit using '<|>' is that it is a very uncommon sequence of symbols that is unlikely to appear in real data.
+This lets us safely parse data without having to worry about interfering with the actual data.  It also makes it easy to distinguish where one
+entry starts and the other ends.  Perhaps it is convenient to have '<>' in resulting parses, such as for an HTML attribute.
+
+A2) See KeybankParse.py  -- I may have misunderstood what it means to delimit by '|' and how the format should look.
+
+A3) See IPAddrParse.py -- If I had more time, I would do some research on socket.inet_aton() to make sure it does indeed verify IP addresses based on IANA standards
+
+A4) See IPAddrParse2.py -- Again, I'm not sure I understood perfectly how you want it to be parsed, let me know if you'd like me to make a change.
+
+B1) (There were soft links to other locations as well.)
+opt/startup/hive-site.xml
+opt/mapr/conf/mapr-clusters.conf
+opt/startup/core-site.xml
+
+B2)
+thrift://localhost:9083
+
+B3)
+<property>
+  <name>hbase.table.namespace.mappings</name>
+  <value>*:/tables</value>
+</property>
+
+B4) Not sure if I understand right, but 'root' is the user and group of the file
+However, mapr is the user in the location opt/mapr/hadoop/hadoop-2.7.0/etc/hadoop/core-size.xml
+
+B5) 7222
